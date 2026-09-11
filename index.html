@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yash Ravindra Charde — Software Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="mobile-bar" id="mobileBar">
+  <div class="mark">YC</div>
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#experience">Experience</a>
+  <a href="#projects">Projects</a>
+  <a href="#research">Research</a>
+  <a href="#skills">Skills</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<nav class="rail">
+  <div class="rail-logo">
+    <div class="mark">YC</div>
+    <div class="name"><strong>Yash Charde</strong>Software Engineer</div>
+  </div>
+  <ul class="rail-nav" id="railNav">
+    <div class="track"></div>
+    <div class="track-fill" id="trackFill"></div>
+    <li class="active"><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#research">Research</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="rail-foot">
+    <a href="mailto:yashcharde.asu@gmail.com">Email</a>
+    <a href="https://linkedin.com/in/chardeyash/" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://github.com/Yash-Charde" target="_blank" rel="noopener">GitHub</a>
+  </div>
+</nav>
+
+<div class="content">
+
+  <!-- HOME -->
+  <section class="section" id="home">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-role">// full-stack development, distributed systems &amp; AI/ML</div>
+        <h1>Yash Ravindra<br>Charde</h1>
+        <p class="pitch">Software engineer with <b>3+ years</b> shipping production backend systems, currently pursuing an <b>M.S. in Computer Science at Arizona State University</b> (4.00 GPA). I've built fan-out event pipelines that carry security-critical business events, cut billing runs from a full day to hours, and moved 48,000+ clients onto a leaner delivery model. Lately I've been building distributed ML systems on AWS and co-authoring research on latent reasoning in LLMs.</p>
+        <div class="stat-row">
+          <div class="stat-chip"><span class="num">3+</span><span class="lbl">yrs experience</span></div>
+          <div class="stat-chip"><span class="num">4.00</span><span class="lbl">MS GPA</span></div>
+          <div class="stat-chip"><span class="num">$180K</span><span class="lbl">saved / year</span></div>
+          <div class="stat-chip"><span class="num">48K+</span><span class="lbl">clients migrated</span></div>
+        </div>
+        <div class="cta-row">
+          <a href="#projects" class="btn btn-primary">See the work</a>
+          <a href="#contact" class="btn btn-ghost">Get in touch</a>
+          <a href="resume.pdf" class="btn btn-ghost" target="_blank" rel="noopener">View/Download Resume</a>
+        </div>
+      </div>
+
+      <!--
+      DIAGRAM (currently disabled) — the "client events -> event bus" pipeline
+      visual that used to sit beside the hero text. To bring it back:
+        1. Uncomment this whole block.
+        2. Add class="hero-grid has-diagram" to the .hero-grid div above.
+
+      <div>
+        <div class="diagram-wrap">
+          <svg viewBox="0 0 460 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram of an event pipeline: a producer sends events to an event bus, which fans out to REST, IBM MQ, and Kafka consumers.">
+            connecting paths
+            <path id="p0" d="M85,140 C140,140 150,140 195,140" fill="none" stroke="#232b36" stroke-width="1.5"/>
+            <path id="p1" d="M255,140 C300,140 300,55 350,55" fill="none" stroke="#232b36" stroke-width="1.5"/>
+            <path id="p2" d="M255,140 C300,140 300,140 350,140" fill="none" stroke="#232b36" stroke-width="1.5"/>
+            <path id="p3" d="M255,140 C300,140 300,225 350,225" fill="none" stroke="#232b36" stroke-width="1.5"/>
+
+            producer
+            <rect x="20" y="118" width="65" height="44" rx="3" fill="#10141b" stroke="#f2a93b"/>
+            <text x="52" y="136" text-anchor="middle" font-family="IBM Plex Mono" font-size="9" fill="#e9edf2">Client</text>
+            <text x="52" y="150" text-anchor="middle" font-family="IBM Plex Mono" font-size="9" fill="#e9edf2">Events</text>
+
+            bus
+            <rect x="195" y="112" width="60" height="56" rx="3" fill="#10141b" stroke="#4fd1b5"/>
+            <text x="225" y="136" text-anchor="middle" font-family="IBM Plex Mono" font-size="8.5" fill="#e9edf2">Event</text>
+            <text x="225" y="148" text-anchor="middle" font-family="IBM Plex Mono" font-size="8.5" fill="#e9edf2">Bus</text>
+
+            consumers
+            <rect x="350" y="33" width="70" height="44" rx="3" fill="#10141b" stroke="#232b36"/>
+            <text x="385" y="51" text-anchor="middle" font-family="IBM Plex Mono" font-size="9" fill="#8d97a5">REST</text>
+            <text x="385" y="63" text-anchor="middle" font-family="IBM Plex Mono" font-size="9" fill="#8d97a5">endpoint</text>
+
+            <rect x="350" y="118" width="70" height="44" rx="3" fill="#10141b" stroke="#232b36"/>
+            <text x="385" y="136" text-anchor="middle" font-family="IBM Plex Mono" font-size="9" fill="#8d97a5">IBM MQ</text>
+            <text x="385" y="148" text-anchor="middle" font-family="IBM Plex Mono" font-size="9" fill="#8d97a5">consumer</text>
+
+            <rect x="350" y="203" width="70" height="44" rx="3" fill="#10141b" stroke="#232b36"/>
+            <text x="385" y="221" text-anchor="middle" font-family="IBM Plex Mono" font-size="9" fill="#8d97a5">Kafka</text>
+            <text x="385" y="233" text-anchor="middle" font-family="IBM Plex Mono" font-size="9" fill="#8d97a5">consumer</text>
+
+            moving packets
+            <circle r="3.2" fill="#f2a93b">
+              <animateMotion dur="2.6s" repeatCount="indefinite" path="M85,140 C140,140 150,140 195,140"/>
+            </circle>
+            <circle r="3" fill="#4fd1b5">
+              <animateMotion dur="2.2s" begin="0.6s" repeatCount="indefinite" path="M255,140 C300,140 300,55 350,55"/>
+            </circle>
+            <circle r="3" fill="#4fd1b5">
+              <animateMotion dur="2s" begin="0.9s" repeatCount="indefinite" path="M255,140 C300,140 300,140 350,140"/>
+            </circle>
+            <circle r="3" fill="#4fd1b5">
+              <animateMotion dur="2.4s" begin="1.2s" repeatCount="indefinite" path="M255,140 C300,140 300,225 350,225"/>
+            </circle>
+          </svg>
+        </div>
+        <div class="diagram-cap">at-least-once fan-out delivery — the shape of the systems I like building</div>
+      </div>
+      -->
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="section-inner">
+      <div class="eyebrow">About</div>
+      <h2>Grounded in production, curious about research.</h2>
+      <div class="about-grid">
+        <div>
+          <p>I spent the first three years of my career at <b>ADP</b>, working on RUN — payroll and HR software used by tens of thousands of small businesses. I moved from maintaining the messaging backbone that keeps security tools in sync with every business event, to owning client-facing features like billing consolidation and year-end compliance tracking.</p>
+          <p>That work taught me to care about the boring parts of engineering that matter most in production: retry logic, at-least-once delivery, and knowing exactly what happens when something fails at 2am.</p>
+          <p>I'm now doing an <b>M.S. in Computer Science at Arizona State University</b>, splitting my time between coursework in data systems and machine learning, and independent projects in distributed and federated systems on AWS. I'm also co-authoring a paper on latent reasoning in large language models.</p>
+        </div>
+        <div class="fact-card">
+          <h3>Education</h3>
+          <div class="sub">M.S. Computer Science</div>
+          <div class="fact-row"><span>School</span><span>Arizona State University</span></div>
+          <div class="fact-row"><span>Duration</span><span>Aug 2025 – May 2027</span></div>
+          <div class="fact-row"><span>GPA</span><span>4.00 / 4.00</span></div>
+          <div class="fact-row"><span>Location</span><span>Tempe, AZ</span></div>
+
+          <div class="coursework">
+            <div class="sub">Coursework</div>
+            <div class="pill-list">
+              <span class="pill">Cloud Computing</span>
+              <span class="pill">Data Processing at Scale</span>
+              <span class="pill">Data Mining</span>
+              <span class="pill">Statistical ML</span>
+              <span class="pill">Knowledge Representation</span>
+              <span class="pill">Data Visualization</span>
+              <span class="pill">NLP</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="section" id="experience">
+    <div class="section-inner">
+      <div class="eyebrow">Experience</div>
+      <h2>Three years at ADP, on the systems behind RUN payroll.</h2>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-head">
+            <h3>Senior Member Technical</h3>
+            <span class="tl-date">Apr 2024 – Jun 2025</span>
+          </div>
+          <div class="tl-org">ADP Private Limited — Hyderabad, India</div>
+          <ul>
+            <li>Built a consolidated invoices page in RUN with <b>React.js, Node.js, and REST APIs</b> — a responsive, mobile-friendly UI with consistent behavior across browsers and devices.</li>
+            <li>Shipped an end-to-end <b>Year-End Readiness Tracker</b> (React.js + ASP.NET Web API) giving clients a single dashboard for W-2 progress, deadlines, and required actions.</li>
+            <li>Optimized year-end billing and production workflows — cut billing processing time by <b>3 hours</b> and brought W-2 production down to <b>6 hours</b>; migrated <b>48,000+ clients</b> to Local Delivery for <b>$180K</b> in annual savings.</li>
+          </ul>
+        </div>
+        <div class="tl-item">
+          <div class="tl-head">
+            <h3>Member Technical</h3>
+            <span class="tl-date">Jul 2021 – Mar 2024</span>
+          </div>
+          <div class="tl-org">ADP Private Limited — Hyderabad, India</div>
+          <ul>
+            <li>Architected an <b>event-driven integration platform</b> for GSO to receive, persist, and asynchronously fan out every RUN business event to downstream security consumers over REST, IBM MQ, and Kafka using shared integration contracts.</li>
+            <li>Maintained the core processing components — <b>MQReader</b> (consumer &amp; dispatcher) and <b>BatchRetry</b> (retry &amp; reprocessing) — keeping delivery at-least-once and resilient across distributed messaging workflows.</li>
+            <li>Built <b>RED fraud alert</b> email notifications for security-sensitive events, and led production support, incident triage, and root-cause analysis on high-priority event pipelines.</li>
+            <li>Modernized the shipping details page, integrating delivery preferences into an MVC architecture to cut manual follow-ups and simplify the workflow.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section" id="projects">
+    <div class="section-inner">
+      <div class="eyebrow">Projects</div>
+      <h2>Distributed systems, applied to ML.</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <h3>Federated Learning System on AWS Cloud and Edge</h3>
+          <ul>
+            <li>Architected an end-to-end federated learning pipeline on <b>10 distributed EC2 workers</b> with an event-driven Lambda aggregator triggered via S3, training a LeNet-5 CNN on MNIST to <b>97.69% accuracy</b> with consistent round-over-round convergence and no polling overhead.</li>
+            <li>Extended the system to the edge with <b>AWS IoT Greengrass</b>, deploying custom MQTT-triggered components with scoped permissions for secure model uploads, sustaining <b>97.39% accuracy</b> in the edge deployment.</li>
+          </ul>
+          <div class="tag-row">
+            <span class="tag">AWS EC2</span><span class="tag">Lambda</span><span class="tag">S3</span>
+            <span class="tag">IoT Greengrass</span><span class="tag">PyTorch</span><span class="tag">Federated Learning</span>
+          </div>
+        </div>
+        <div class="project-card">
+          <h3>Scalable Cloud-Native Face Recognition Pipeline on AWS</h3>
+          <ul>
+            <li>Designed a multi-tier elastic pipeline — a stateless EC2 web tier, SQS-decoupled PyTorch inference workers, and S3 + DynamoDB for storage — sustaining sub-second average latency across <b>100 concurrent requests</b>, scaling queues cleanly from 0 to peak and back.</li>
+            <li>Wrote a custom autoscaling controller in Python that scales the application tier from <b>0 to 15 EC2 instances</b> based on SQS queue depth, with DynamoDB result caching for a <b>~3x</b> warm-cache speedup.</li>
+          </ul>
+          <div class="tag-row">
+            <span class="tag">AWS EC2</span><span class="tag">SQS</span><span class="tag">DynamoDB</span>
+            <span class="tag">PyTorch</span><span class="tag">Autoscaling</span><span class="tag">Python</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESEARCH -->
+  <section class="section" id="research">
+    <div class="section-inner">
+      <div class="eyebrow">Research</div>
+      <h2>Currently under review.</h2>
+      <div class="research-card">
+        <div class="badge">01</div>
+        <div>
+          <h3>Robust Latent Reasoning in Large Language Models</h3>
+          <p>Co-authored with A. V. Malarkkan, M. R. Choudhury, U. Byahut, V. Gupta, and Dr. Yanjie Fu, under whose supervision the work was carried out.</p>
+          <p>Studies how large language models reason within their latent space, and how that reasoning can be made more robust.</p>
+          <span class="status">Under review — NeurIPS 2026 &amp; ICML 2026</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section" id="skills">
+    <div class="section-inner">
+      <div class="eyebrow">Skills</div>
+      <h2>The stack I build with.</h2>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h3>Languages</h3>
+          <div class="pill-list">
+            <span class="pill hl">Python</span><span class="pill hl">JavaScript (ES6+)</span><span class="pill hl">TypeScript</span>
+            <span class="pill">C / C++</span><span class="pill">C#</span><span class="pill">Java</span>
+            <span class="pill">PL/SQL</span><span class="pill">SQL</span><span class="pill">HTML / CSS</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>Frameworks &amp; Libraries</h3>
+          <div class="pill-list">
+            <span class="pill hl">React.js</span><span class="pill hl">Node.js</span><span class="pill hl">Express.js</span>
+            <span class="pill">Angular</span><span class="pill">ASP.NET Core</span><span class="pill">Microservices</span>
+            <span class="pill">RESTful APIs</span><span class="pill">MVC</span><span class="pill">Tailwind CSS</span>
+            <span class="pill">Cypress</span><span class="pill">D3.js</span><span class="pill">PyTorch</span>
+            <span class="pill">TensorFlow</span><span class="pill">Scikit-learn</span><span class="pill">OpenCV</span>
+            <span class="pill">Pandas / NumPy</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>Cloud &amp; Tools</h3>
+          <div class="pill-list">
+            <span class="pill hl">AWS (EC2, S3, Lambda, DynamoDB, API Gateway)</span>
+            <span class="pill">Docker</span><span class="pill">Kubernetes</span><span class="pill">Jenkins</span>
+            <span class="pill">CI/CD</span><span class="pill">Git / GitHub / Bitbucket</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>Practices &amp; Platforms</h3>
+          <div class="pill-list">
+            <span class="pill">Agile</span><span class="pill">Jira</span><span class="pill">Postman</span>
+            <span class="pill">Splunk</span><span class="pill">Figma</span><span class="pill">Linux / Ubuntu</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECOGNITION -->
+  <section class="section" id="recognition">
+    <div class="section-inner">
+      <div class="eyebrow">Recognition</div>
+      <h2>A couple of nods along the way.</h2>
+      <div class="recognition-grid">
+        <div class="recognition-card">
+          <div class="icon">◆</div>
+          <div>
+            <h3>Team of the Quarter</h3>
+            <p>For leading the Billing and Invoices initiative at ADP Private Limited.</p>
+          </div>
+        </div>
+        <div class="recognition-card">
+          <div class="icon">◆</div>
+          <div>
+            <h3>"Win as One" Award</h3>
+            <p>For contributions to the Year-End Health Tracker initiative at ADP Private Limited.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="section-inner">
+      <div class="eyebrow">Contact</div>
+      <h2>Let's talk about backend systems, AI infrastructure, or anything in between.</h2>
+      <div class="contact-grid">
+        <a class="contact-link" href="mailto:yashcharde.asu@gmail.com">
+          <div class="ic">@</div>
+          <div><span class="lbl">Email</span><span class="val">yashcharde.asu@gmail.com</span></div>
+        </a>
+        <a class="contact-link" href="tel:+16023943218">
+          <div class="ic">#</div>
+          <div><span class="lbl">Phone</span><span class="val">+1 (602) 394-3218</span></div>
+        </a>
+        <a class="contact-link" href="https://linkedin.com/in/chardeyash/" target="_blank" rel="noopener">
+          <div class="ic">in</div>
+          <div><span class="lbl">LinkedIn</span><span class="val">linkedin.com/in/chardeyash</span></div>
+        </a>
+        <a class="contact-link" href="https://github.com/Yash-Charde" target="_blank" rel="noopener">
+          <div class="ic">&lt;/&gt;</div>
+          <div><span class="lbl">GitHub</span><span class="val">github.com/Yash-Charde</span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>Yash Ravindra Charde</span>
+    <span>Tempe, AZ · Arizona State University</span>
+  </footer>
+</div>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>
